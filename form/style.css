@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+body{
+  display: flex;
+  height: 100vh;
+  
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+  background:linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+}
+.container{
+ max-width: 700px;
+ width: 100%;
+ background: #fff;
+ padding: 25px 30px;
+ border-radius: 25px;
+
+
+}
+.container .heading{
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+}
+.container .heading::before{
+  content: "";
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  height: 3px;
+  width: 30px;
+  background:linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%); 
+}
+.container form .details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 12px 0 12px 0;
+}
+ form .details .inputbox{
+  margin-bottom: 15px;
+  width: calc(100% /2 - 20px);
+}
+.details .inputbox .det{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.details .inputbox input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.details .inputbox input:focus,
+.details .inputbox input:valid{
+  border-color: #3F2B96;
+}
+form .gen .gen-title{
+  font-size: 20px;
+  font-weight: 600;
+}
+form .btn{
+  height: 45px;
+  margin: 45px 0;
+}
+form .btn input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+  transition: 0.3s ease;
+}
+form .btn input:hover{
+  background: royalblue;
+}
+@media (max-width:584px){
+ .container{
+  max-width: 100%;
+ }
+ form .details .inputbox{
+  margin-bottom: 15px;
+  width: 100%;
+ }
+form .gen .category{
+  width: 100%;
+}
+form .gen .terms{
+  width: 100%;
+}
+.container form .details{
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.details::-webkit-scrollbar{
+  width: 0;
+}
+}
